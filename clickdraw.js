@@ -1,3 +1,10 @@
+//Karina Ionkina                                                                                  
+//SoftDev2 pd07                                                                                   
+//K00 -- I See a Red Door                                                                          
+//2018-02-03  
+
+
+
 var c = document.getElementById("slate");
 var ctx = c.getContext("2d");
 var draw_dot;
