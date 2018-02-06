@@ -1,7 +1,7 @@
-//Karina Ionkina                                                                                  
+//Karina Ionkina and Dasha Shifrina                                                                            
 //SoftDev2 pd07                                                                                   
 //K00 -- I See a Red Door                                                                          
-//2018-02-03  
+//2018-02-03  & 2018-02-05
 
 
 var x1;
