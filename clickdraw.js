@@ -39,7 +39,6 @@ var draw = function(e){
 	else {
 
 	    drawRect(e);
-	    return ctx.beginPath();
 	}
     }
 }
@@ -65,16 +64,6 @@ var togl = function(e){
     console.log(draw_dot);
 }
 
-
-var artichoke = function(e){
-    var x2 = e.offsetX;
-    var y2 = e.offsetY;
-    moveTo(x2, y2);
-    
-
-
-}
-
 var drawCircle = function(e){
 
     ctx.arc(e.offsetX, e.offsetY, 5, 0, Math.PI * 2);
@@ -92,9 +81,9 @@ var drawRect = function(e){
     ctx.lineTo(e.offsetX, e.offsetY);
     ctx.stroke();
     ctx.fillStyle = "black";
-    ctx.fillRect(e.clientX, e.clientY, 10, 10);
+    ctx.fillRect(e.offsetX, e.offsetY, 10, 10);
+    ctx.stroke();
+    ctx.moveTo(e.offsetX,e.offsetY);
     ctx.closePath();
-    ctx.beginPath();
 
 }
-
