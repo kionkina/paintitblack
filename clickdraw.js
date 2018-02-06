@@ -77,21 +77,24 @@ var artichoke = function(e){
 
 var drawCircle = function(e){
 
-    ctx.arc(e.clientX, e.clientY, 5, 0, Math.PI * 2);
-    
-    ctx.stroke();
+    ctx.arc(e.offsetX, e.offsetY, 5, 0, Math.PI * 2);
     ctx.fillStyle = 'green';
     ctx.fill();
+    ctx.moveTo(e.offsetX, e.offsetY);
+    ctx.stroke();
     ctx.closePath();
+
 
     return;
 }
 
 var drawRect = function(e){
-    
+    ctx.lineTo(e.offsetX, e.offsetY);
+    ctx.stroke();
     ctx.fillStyle = "black";
     ctx.fillRect(e.clientX, e.clientY, 10, 10);
     ctx.closePath();
+    ctx.beginPath();
 
 }
 
